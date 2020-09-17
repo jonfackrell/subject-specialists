@@ -64,7 +64,7 @@ window.ss = {
             '\n' +
             '            <div class="space-y-2">\n' +
             '                <div class="text-lg text-gray-900 leading-6 font-medium space-y-1">\n' +
-            '                    <h4><a href="{{ url }}">{{ full_name }}</a></h4>\n' +
+            '                    <h2><a href="{{ url }}">{{ full_name }}</a></h2>\n' +
             '                    <p class="text-gray-600">{{{ subject_specialty }}}</p>\n' +
             '                </div>\n' +
             '            <div class="text-lg leading-7">\n' +
