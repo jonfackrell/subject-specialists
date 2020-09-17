@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Specialists</title>
+    <link rel="stylesheet" type="text/css" href="build/css/subject-specialists.min.css">
+</head>
+<body>
+<header id="header"
+        role="banner"
+        class="mb-8"
+        style="background-color: #003; height: 142px;">
+
+</header>
+<main class="bg-white">
+    <h1 class="mx-auto mb-6 flex-1 px-0 text-2xl max-w-screen-xl flex justify-between border-b-2 border-blue-900">
+        Subject Specialists
+    </h1>
+    <section class="mx-auto flex-1 px-4 max-w-screen-xl flex justify-between">
+        <div class="flex-1 flex">
+            <div class="w-full flex md:ml-0">
+                <label for="search_field"
+                       class="sr-only">
+                    Search
+                </label>
+                <div class="relative w-full text-gray-400 focus-within:text-gray-600 mt-1">
+                    <div class="absolute inset-y-0 left-2 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                        </svg>
+                    </div>
+                    <input id="search_field"
+                           class="form-input block w-full h-full pl-8 pr-3 py-2 rounded-md text-gray-900 placeholder-gray-500 focus:placeholder-gray-400 sm:text-sm"
+                           placeholder="Search"
+                           type="search">
+                </div>
+            </div>
+        </div>
+        <div class="ml-4 flex items-center md:ml-6">
+            <div>
+                <label for="sort"
+                       class="sr-only">
+                    Sort by
+                </label>
+                <select id="sort"
+                        class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 sm:text-sm sm:leading-5">
+                    <option value="first_name:az" selected>First Name A &rarr; Z</option>
+                    <option value="first_name:za">First Name Z &rarr; A</option>
+                    <option value="last_name:az">Last Name A &rarr; Z</option>
+                    <option value="last_name:za">Last Name Z &rarr; A</option>
+                    <option value="subject_specialty:az">Subject Z &rarr; A</option>
+                    <option value="subject_specialty:za">Subject Z &rarr; A</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="mx-auto py-12 px-4 max-w-screen-xl sm:px-6 lg:px-8 lg:py-12">
+        <div class="space-y-12">
+            <ul id="subject-specialists"
+                class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
+                x-max="1">
+            </ul>
+        </div>
+    </section>
+</main>
+<script type="text/javascript">
+    var ss = ss || {};
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true;
+    dc.src = 'build/js/subject-specialists.min.js';
+    document.getElementsByTagName("body")[0].appendChild(dc);
+</script>
+</body>
+</html>
