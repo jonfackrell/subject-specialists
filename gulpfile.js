@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+
 
 gulp.task('css', function () {
     const postcss = require('gulp-postcss');
@@ -22,10 +23,12 @@ gulp.task('js', function() {
         'node_modules/handlebars/dist/handlebars.min.js',
         'src/subject-specialists.js'
     ])
-        .pipe(concat('build/js/subject-specialists.min.js'))
-        .pipe(gulp.dest('./'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./'));
+        .pipe(concat('subject-specialists.js'))
+        .pipe(gulp.dest('build/js'))
+        .pipe(rename('subject-specialists.min.js'))
+        .pipe(uglify({warnings: false}))
+        .pipe(gulp.dest('build/js'))
+    ;
 });
 
 gulp.task('publish', gulp.parallel('css', 'js'));

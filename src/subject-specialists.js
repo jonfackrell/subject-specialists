@@ -34,8 +34,8 @@ window.ss = {
 
         var sort = document.getElementById('sort');
         sort.addEventListener("change", function(){
-            var [property, order] = event.target.value.split(":")
-            ss.people = ss.sortBy(ss.people, property, order);
+            var options = event.target.value.split(":");
+            ss.people = ss.sortBy(ss.people, options[0], options[1]);
             ss.updateDisplay();
         });
     },
@@ -66,13 +66,13 @@ window.ss = {
             '            </div>\n' +
             '\n' +
             '            <div class="space-y-2">\n' +
-            '                <div class="text-lg text-gray-900 leading-6 font-medium space-y-1">\n' +
-            '                    <h4><a href="{{ url }}">{{ full_name }}</a></h4>\n' +
+            '                <div class="text-xl text-gray-900 leading-6 font-medium space-y-1">\n' +
+            '                    <h2><a href="{{ url }}">{{ full_name }}</a></h2>\n' +
             '                    <p class="text-gray-600">{{{ subjects }}}</p>\n' +
             '                </div>\n' +
             '            <div class="text-lg leading-7">\n' +
             '                <p class="text-gray-500">{{{ office }}}</p>\n' +
-            '            </div>' +
+            '            </div>\n' +
             '            <div class="mt-5 max-w-md flex justify-between md:mt-8">\n' +
             '               {{#if email}}<a href="mailto:{{ email }}" class="text-blue-900 hover:text-gray-500 transition ease-in-out duration-150 pr-4">\n' +
             '                   {{ email }}\n' +
@@ -99,7 +99,7 @@ window.ss = {
         return Object.values(groupedPeople);
     },
 
-    sortBy: function(people, property, direction = 'az'){
+    sortBy: function(people, property, direction){
         people = _.sortBy(people, property);
         if(direction == 'za'){
             people = people.reverse();
