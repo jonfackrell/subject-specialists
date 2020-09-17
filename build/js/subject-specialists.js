@@ -104,9 +104,9 @@ window.ss = {
             '            </div>\n' +
             '\n' +
             '            <div class="space-y-2">\n' +
-            '                <div class="text-xl text-gray-900 leading-6 font-medium space-y-1">\n' +
-            '                    <h2><a href="{{ url }}">{{ full_name }}</a></h2>\n' +
-            '                    <p class="text-gray-600">{{{ subjects }}}</p>\n' +
+            '                <div class="text-gray-900 leading-6 font-medium space-y-1">\n' +
+            '                    <h2 class="text-xl"><a href="{{ url }}">{{ full_name }}</a></h2>\n' +
+            '                    <p class="text-lg text-gray-600">{{{ subjects }}}</p>\n' +
             '                </div>\n' +
             '            <div class="text-lg leading-7">\n' +
             '                <p class="text-gray-500">{{{ office }}}</p>\n' +
