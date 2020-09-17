@@ -3,13 +3,15 @@
 The purpose of this project was to create a webpage with a list of subject specialist librarians. 
 
 - [x] List librarian's picture, name, and subject specialties (each librarian is displayed once)
-- [x] Librarians can be sorted alphabetically and reverse alphabetically by first and last name
+- [x] Librarians can be sorted alphabetically and reverse alphabetically by first and last name; as well as first subject
 - [x] Effort was made to make page accessible 
 - [x] Page is responsive 
 
 My initial goal was to create a standalone script that could be reused; however, due to time constraints there is still quite a bit of work to make this a reality.
 
 The subject specialist page was created using vanilla javascript in conjuction with [Tailwind CSS](https://tailwindcss.com/), [Axios](https://www.npmjs.com/package/axios), [Underscore](https://underscorejs.org/), and [Handlebars](https://handlebarsjs.com/).
+
+
 
 ## Usage
 
