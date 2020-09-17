@@ -1,0 +1,11 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.form-select:focus {
+    outline: unset;
+    box-shadow: unset;
+    border-color: unset;
+}
